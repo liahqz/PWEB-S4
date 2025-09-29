@@ -5,7 +5,7 @@ function frequenciaTotal(frequencia) {
     let presencas = 0;
 
     for (let i = 0; i < presenca.length; i++) {
-        if(frequencia[i] === true) {
+        if(frequencia[i] == true) {
             presencas++;
         }
     }
@@ -16,5 +16,6 @@ function frequenciaTotal(frequencia) {
     console.log(`Percentual de presença: ${porcentagem}%`);
     console.log(`Situação do aluno: ${regoun}`);
 }
+
 
 frequenciaTotal(presenca);
