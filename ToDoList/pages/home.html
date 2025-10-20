@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>TodoList</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  
+</head>
+<body>
+  <header>
+    <h1 class="logo">TodoList</h1>
+    <p class="user">Bom dia, <strong>Lívia Leandro! 👋</strong></p>
+  </header>
+
+  <main>
+    <section class="add-tarefa">
+      <h2>Adicionar tarefas</h2>
+      <div class="input">
+        <input type="text" id="nometarefa" placeholder="Nome da tarefa">
+        <button id="botaoadd">Adicionar</button>
+      </div>
+    </section>
+
+    <section class="tarefas">
+      <h2>Minhas tarefas</h2>
+      <p class="legenda">Veja todas as suas tarefas criadas na plataforma.</p>
+
+      <div id="listatarefas" class="listadetarefas"></div>
+
+      <div id="nenhumatarefa" class="semtarefa">
+        <p>😔</br> Nenhum registro encontrado!</p>
+      </div>
+    </section>
+  </main>
+
+
+  
+  <script>
+    var campo = document.getElementById("nometarefa");
+    var botao = document.getElementById("botaoadd");
+    var lista = document.getElementById("listatarefas");
+    var aviso = document.getElementById("nenhumatarefa");
+
+    botao.onclick = function() {
+      var nome = campo.value;
+
+      var tarefa = document.createElement("div");
+      tarefa.className = "tarefa";
+
+      var texto = document.createElement("p");
+      texto.textContent = nome;
+
+      var botaoexcluir = document.createElement("botao");
+      botaoexcluir.textContent = "🗑️";
+      botaoexcluir.className = "deletar";
+      
+      botaoexcluir.onclick = function() {
+        lista.removeChild(tarefa);
+
+        if (lista.childElementCount === 0) {
+          aviso.style.display = "block";
+        }
+      };
+
+      tarefa.appendChild(texto);
+      tarefa.appendChild(botaoexcluir);
+      lista.appendChild(tarefa);
+
+      campo.value = "";
+    };
+  </script>
+</body>
+</html>
