@@ -1,3 +1,55 @@
 .logo {
     color:#7063F0;
 }
+
+.add-tarefa h2 {
+  margin-bottom: 10px;
+}
+
+.input {
+  display: flex;
+  gap: 10px;
+}
+
+.tarefas {
+  margin-top: 40px;
+}
+
+.legenda {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.listadetarefas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tarefa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0e7ff;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.tarefa p {
+  font-weight: 500;
+  color: #4b3cb8;
+}
+
+.deletar {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.semtarefa {
+  text-align: center;
+  color: #555;
+  margin-top: 40px;
+}
